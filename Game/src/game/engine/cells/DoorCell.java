@@ -1,0 +1,33 @@
+package game.engine.cells;
+import javax.management.relation.Role;
+
+public class DoorCell extends Cell {
+    
+    private  Role role;
+    private int energy;
+    public boolean activated;
+
+    public DoorCell(String name, Role role, int energy) {
+        super(name);
+        this.role = role;
+        this.energy = energy;
+        activated = false;
+    }
+
+    public Role getRole(){
+        return role;
+    }
+
+    public int getEnergy(){
+        return energy;
+    }
+
+    public boolean getActivated(){
+        return activated;
+    }
+    
+    public final void setActivated(boolean x){
+        activated=x;
+    }
+
+}
